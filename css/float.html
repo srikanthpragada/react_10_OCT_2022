@@ -1,0 +1,40 @@
+<html>
+<style>
+    img {
+        padding-right: 20px;
+        border-radius: 20%;
+        margin-left: 5%;
+    }
+
+    .column {
+        width : 50%;
+        float : left;
+        text-align: center;
+    }
+    .column img {
+        width :300px;
+        height:400px;
+    }
+</style>
+
+<body>
+    <h2>Floating Demo</h2>
+    <div style="display: inline-block">
+        <img src="../../images/james.jpg" style="float:left" />
+        <div>
+            This is the text. Normally it comes below the logo.
+            <p></p>
+            But now it comes on the right of it as the image is floated to left.
+        </div>
+    </div>
+    <p></p>
+    <!-- place two images side by side with equal size -->
+    <div class="column">
+        <img src="../../images/anders.jpg"   />
+    </div>
+    <div class="column">
+        <img src="../../images/bill.jpg"   />
+    </div>
+</body>
+
+</html>
