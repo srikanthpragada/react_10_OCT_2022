@@ -8,13 +8,17 @@
     <script>
         function sayHello() {
             var name =  document.getElementById("name").value;
-            alert("Hello " + name)
+            var msg = document.getElementById("message")
+            msg.innerHTML = `Hello ${name}!`;
         }
     </script>
 </head>
 <body>
     What's your name : <input type="text" id="name" />
-    <br/>
+    <p></p>
     <button onclick="sayHello()">Click Here</button>
+    <button>Clear</button>
+    <p></p>
+    <h1 style="color:red" id="message"></h1>
 </body>
 </html>
