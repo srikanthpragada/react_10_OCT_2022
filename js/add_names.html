@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Names</title>
+</head>
+<body>
+    <h1>Names</h1>
+    Enter name : <input type="text" id="txtName" />
+    <p></p>
+    <button onclick="addName()">Add</button>
+    <button onclick="deleteName()">Delete</button>
+    <p></p>
+    <ul id="lstNames">
+
+    </ul>
+
+    <script>
+        var names = [] 
+        var txtName = document.getElementById("txtName");
+        var lstNames = document.getElementById("lstNames");
+
+        function addName() {
+            names.push(txtName.value)  // Add name to array 
+            listNames();
+        }
+
+        function deleteName() {
+            // find index of the name to be deleted
+            var idx = names.indexOf(txtName.value)
+            if (idx < 0)  // not found 
+            {
+                alert("Sorry! Name not found!");
+                return;
+            }
+
+            names.splice(idx,1);  // delete item from the given index 
+            listNames();
+        }
+
+         
+        function listNames() 
+        {
+            var output = "";
+            for(var name of names)
+            {
+               output += `<li>${name}</li>`
+            }
+
+            lstNames.innerHTML = output;
+        }
+    </script>
+</body>
+</html>
