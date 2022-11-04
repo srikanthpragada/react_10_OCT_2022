@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class Person {
+            constructor(name, age = 30) {
+                this.name = name
+                this.age = age 
+            }
+
+            getCategory() {
+                if (this.age < 30)
+                   return "Young";
+                else
+                  if(this.age < 60)
+                    return "Middle-aged";
+                  else
+                    return "Old";
+            }
+
+            getInfo() {
+                return  `${this.name} is ${this.getCategory()}`
+            }
+        }
+
+        function showCategory() {
+            var name = document.getElementById("pname").value 
+            var age = document.getElementById("page").value 
+
+            var p = new Person(name, age) // create object of Person
+            alert(p.getInfo())
+        }
+        
+    </script>    
+</head>
+<body>
+    <h1>Person Details</h1>
+    Name : <input type="text" id="pname" />
+    Age : <input type="number" id="page" />
+    <button onClick="showCategory()">Category</button>
+
+</body>
+</html>
