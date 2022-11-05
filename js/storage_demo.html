@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Languages</title>
+</head>
+
+<body>
+    <h1>Languages</h1>
+    <input type="text" id="lang" placeholder="Language" />
+    <button onclick="addLang()">Add</button>
+    <ul id="langsList">
+
+    </ul>
+</body>
+<script>
+    function addLang() {
+        var langs = localStorage.getItem("langs")
+        if (langs)
+            langs = langs + "," + langName.value
+        else
+            langs = langName.value
+
+        localStorage.setItem("langs", langs)
+        showLangs()
+    }
+
+    function showLangs() {
+        var list = ""
+        var langs = localStorage.getItem("langs")
+        var lang_names = langs.split(",")
+        lang_names.forEach(v => list = list + "<li>" + v + "</li>")
+        langsList.innerHTML = list;
+    }
+
+    var langName = document.getElementById("lang")
+    var langsList = document.getElementById("langsList")
+
+    showLangs()
+
+
+</script>
+
+</html>

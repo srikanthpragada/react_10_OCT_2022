@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Events</title>
+    <script>
+        var id;
+        function startProcess() {
+            id = setTimeout( () => alert("Process Done"), 10000);
+        }
+        function process() {
+            alert("Process Completed!")
+        }
+
+        function cancelProcess() {
+            if(id) {
+               clearTimeout(id);
+               alert("Process has been canceled!")
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="startProcess()">Start Process</button>
+    <button onclick="cancelProcess()">Cancel Process</button>
+</body>
+</html>
