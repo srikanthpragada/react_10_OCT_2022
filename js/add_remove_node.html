@@ -1,0 +1,24 @@
+<html>
+<script>
+    function addNode() {
+        div1 = document.getElementById("div1")
+        p = document.createElement("p")
+        p.innerHTML = "This is new para"
+        //p.appendChild(document.createTextNode("Hello!"))
+        div1.appendChild(p)
+    }
+    function removeNode() {
+        div1 = document.getElementById("div1")
+        p = div1.lastChild
+        div1.removeChild(p)
+    }
+</script>
+
+<body>
+    <div id="div1" style="border:2px solid red">This is div1.</div>
+    <p></p>
+    <button onclick="addNode()">Add Node</button>
+    <button onclick="removeNode()">Remove Node</button>
+</body>
+
+</html>
