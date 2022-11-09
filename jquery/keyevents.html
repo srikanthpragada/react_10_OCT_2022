@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"> </script>
+</head>
+<script>
+    // Document ready event 
+    $(() => {
+        $("#text").keypress(e => {
+            console.log(e)
+            $("#code").html(e.originalEvent.charCode);
+        }
+        );
+
+        $("#text").blur(function () {
+            console.log(this);  // DOM object 
+            var jtext = $(this) // DOM object to jQuery Object  
+
+            var value = jtext.val()  // val() is jQuery method
+            jtext.val(value.toUpperCase());
+        }
+        );
+    }
+    );
+</script>
+
+<body>
+    <h2>Handling KeyEvents Demo</h2>
+    <input id="text" type="text" autocomplete="off" />
+    <p></p>
+    <input type="text" autocomplete="off" />
+    <h3 id="code"></h3>
+</body>
+
+</html>

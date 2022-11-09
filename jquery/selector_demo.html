@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clear Textboxes</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        function clearAll() {
+            $("input[type='text']").val("");
+        }
+
+        function clearOne() {
+            $("#t1").val("");
+        }
+
+        function clearSelected() {
+            $("input.email").val("");
+        }
+
+        function test() {
+            var coll = $("input") 
+            var first = coll[0]    // get DOM element from collection
+            alert (first.value)
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <input id="t1" type="text" class="email" value="first" />
+    <input type="text" value="second" />
+    <input type="text" class="email" value="third" />
+    <input type="text" value="fourth" />
+    <input type="password" value="password" />
+     
+    <p></p>
+    <button onclick="clearAll()">Clear All</button>
+    <button onclick="clearOne()">Clear One</button>
+    <button onclick="clearSelected()">Clear Selected</button>
+    <button onclick="test()">Test</button>
+
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Hello</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+         function showMessage() {
+             var cd = new Date().toString()
+            //  var message = document.getElementById("message")
+            //  message.innerHTML = cd 
+              
+            $("h1").text(cd)
+             //console.log($("#message")[0])
+         }
+         function clearMessages() {
+            $("h1").text("")
+         }
+
+    </script>
+</head>
+<body>
+    <h1 id="message1"></h1>
+    <h1 id="message2"></h1>
+    <button onclick="showMessage()">Show Message</button>
+    <button onclick="clearMessages()">Clear Message</button>
+    
+</body>
+</html>

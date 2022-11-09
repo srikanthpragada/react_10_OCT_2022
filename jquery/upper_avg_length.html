@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upper and Avg. Length</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"> </script>
+    <script>
+        function convertToUpper() {
+            var textboxes = $("input[type='text']")
+            for(var c of textboxes) {
+                c.value = c.value.toUpperCase()
+            }
+        }
+        
+        function getAvgLength() {
+            var textboxes = $("input[type='text']")
+            var total = 0;
+            for(var c of textboxes) {
+                total += c.value.length
+            }
+            alert(total / 5)
+        }
+    </script>
+</head>
+<body>
+    <h1>Manipulate Text</h1>
+    <input type="text" size="20" />
+    <br/>
+    <input type="text" size="20" />
+    <br/>
+    <input type="text" size="20" />
+    <br/>
+    <input type="text" size="20" />
+    <br/>
+    <input type="text" size="20" />
+    <p></p>
+
+    <button onclick="convertToUpper()">Upper</button>
+    <button onclick="getAvgLength()">Avg. Length</button>
+
+    
+</body>
+</html>

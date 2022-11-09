@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <style>
+        .banner {
+            font-size: 50px;
+            color: red;
+        }
+
+        .bright {
+            background-color: gray;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"> </script>
+</head>
+<script>
+    var m;
+    
+    // Document ready 
+    $( () => m = $("#message"))
+
+    function toggle() {
+        m.toggleClass("banner")
+    }
+
+    function bright() {
+        m.addClass("bright")
+    }
+
+</script>
+
+<body>
+    <div id="message">This is a simple DIV</div>
+    <p></p>
+    <button onclick="toggle()">Toggle</button>
+    <button onclick="bright()">Bright</button>
+</body>
+
+</html>
