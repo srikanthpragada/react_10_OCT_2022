@@ -6,6 +6,7 @@
 <script>
     function getTime() {
         const URL = "http://worldtimeapi.org/api/timezone/Asia/Kolkata"
+        // get(URL, callback)
         $.get(URL,
             function (result) {
                 //console.log(result)
@@ -20,7 +21,8 @@
                 {
                     url: URL,
                     type: 'get',
-                    success: (result) => { $("#message").text(result.datetime) },
+                    success: 
+                       (result) =>  $("#message").text(result.datetime),
                     error: (errorObj) => {
                         console.log(errorObj)
                         alert("Sorry! Could not get time!")
