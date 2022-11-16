@@ -1,9 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import CorrectCounter from './state/CorrectCounter';
-import CounterCC from './state/CounterCC';
-import DigitalClock from './state/DigitalClock';
+import Emails from './state/Emails';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -19,7 +17,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <React.StrictMode>
-        <CounterCC />
+        <Emails />
   </React.StrictMode>
 );
 
