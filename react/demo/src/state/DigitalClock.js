@@ -11,7 +11,10 @@ export default function DigitalClock(props) {
 
   function changeClock() {
       var ct = new Date()
-      setClock(`${ct.getHours()}:${ct.getMinutes()}:${ct.getSeconds()}`)
+      var hours = ct.getHours().toString().padStart(2,0)
+      var mins = ct.getMinutes().toString().padStart(2,0)
+      var secs  = ct.getSeconds().toString().padStart(2,0)
+      setClock(`${hours}:${mins}:${secs}`)
   }
 
   return (
