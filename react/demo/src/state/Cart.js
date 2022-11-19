@@ -20,6 +20,12 @@ export default function Cart() {
         setData({ ...data, prodid: id })
     }
 
+    function updateData(event) {
+        var value = event.target.value  
+        var name = event.target.name 
+        setData({ ...data, [name] : value})
+    }
+
     function addToCart(event) {
         event.preventDefault() // prevent form submission
         setCart([...cart, data])
@@ -28,51 +34,74 @@ export default function Cart() {
     return (
         <>
             <h1>Shooping Cart</h1>
-            <form>
+            <form onSubmit={addToCart}>
                 Product
-                <select id="products" onChange={updateProduct}>
+                <select name="prodid" onChange={updateProduct}>
                     {products.map(p => <option value={p.id} key={p.id}>{p.name}</option>)}
                 </select>
-                Quantity : <input type="number" onChange={updateQty} required />
+                &nbsp;
+                Quantity : <input name="qty" type="number" 
+                      style={{width :100}} onChange={updateQty} required />
                 <p></p>
-                <input type="submit" onClick={addToCart} value="Add To Cart" />
+                <input type="submit" value="Add To Cart" />
             </form>
             <p></p>
-            {cart.length > 0 && <ShowCart  products={products}  cart={cart} />}
+            {cart.length > 0 && <ShowCart products={products} cart={cart} />}
         </>
     )
 }
 
-function ShowCart({products, cart}) {
+function ShowCart({ products, cart }) {
+    var total = 0;
     return (
         <table className="table table-bordered">
-        <thead>
-            <tr>
-                <th>Product</th>
-                <th>Price</th>
-                <th>Qty</th>
-                <th>Amount</th>
-            </tr>
-        </thead>
-        <tbody>
-            {
-                cart.map(item => <Item products={products} item={item} />)
-            }
-        </tbody>
-    </table>
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Qty</th>
+                    <th>Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                {
+                    cart.map(item => {
+                        var product = products[item.prodid]
+                        var cartItem = {
+                            title: product.name,
+                            price: product.price,
+                            qty: item.qty,
+                            amount: product.price * item.qty
+                        }
+                        total += cartItem.amount;
+                        return <ShowItem cartItem={cartItem} />
+                    }
+                    )
+                }
+                <ShowTotal total={total} />
+            </tbody>
+        </table>
     )
 }
 
-function Item({ products, item }) {
-    var product = products[item.prodid]
+function ShowItem({ cartItem }) {
     return (
         <tr>
-            <td>
-                {product.name}
-            </td>
-            <td> {product.price}</td>
-            <td> {item.qty} </td>
-            <td> {product.price * item.qty} </td>
+            <td>{cartItem.title}</td>
+            <td> {cartItem.price}</td>
+            <td> {cartItem.qty} </td>
+            <td> {cartItem.amount} </td>
         </tr>
     )
+}
+
+
+function ShowTotal({ total }) {
+    return (
+        <tr>
+            <td colspan="3"></td>
+            <td>{total}</td>
+        </tr>
+    )
+
 }
