@@ -1,7 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import FunctionDemo from './context/FunctionDemo';
+import GitUserInfo from './ajax/GitUserInfo';
+import GitUserInfoJQuery from './ajax/GitUserInfo';
+import JQueryDemo from './ajax/JQueryDemo';
 import './index.css';
+import UncontrolledDemo from './state/UncontrolledDemo';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -16,8 +19,8 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 // ]
 
 root.render(
-  <React.StrictMode>
-         <FunctionDemo />
+  <React.StrictMode> 
+     <GitUserInfo />
   </React.StrictMode>
 );
 
