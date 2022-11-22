@@ -1,0 +1,40 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "title": "Front-End with React",
+      "trainer": "Srikanth Pragada",
+      "price": "4000"
+    },
+    {
+      "id": 2,
+      "title": "Data Science (Machine Learning)",
+      "trainer": "Srikanth Pragada",
+      "price": "5000"
+    },
+    {
+      "id": 3,
+      "title": "Java EE + Hibernate + Spring",
+      "trainer": "Srikanth Pragada",
+      "price": "5000"
+    },
+    {
+      "title": "Java EE",
+      "trainer": "Srikanth",
+      "price": "4000",
+      "id": 4
+    },
+    {
+      "title": "Python",
+      "trainer": "Srikanth",
+      "price": "4000",
+      "id": 5
+    },
+    {
+      "title": "AWS ",
+      "trainer": "Srikanth",
+      "price": "5000",
+      "id": 6
+    }
+  ]
+}

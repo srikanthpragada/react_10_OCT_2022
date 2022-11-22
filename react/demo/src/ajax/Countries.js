@@ -15,7 +15,6 @@ export default function Countries() {
                 setCountries(resp);
                 setSelectedCountries(resp);
                 setLoading(false)
-
             },
             error: (error) => {
 
@@ -25,7 +24,6 @@ export default function Countries() {
 
     function getInfo() {
         var cname = countryName.current.value.toLowerCase()
-        console.log(cname)
         setSelectedCountries(
             countries.filter(country => country.name.common.toLowerCase().includes(cname))
         );

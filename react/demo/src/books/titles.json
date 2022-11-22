@@ -1,0 +1,68 @@
+{
+  "books": [
+    {
+      "id": 2,
+      "title": "Long walk to freedom",
+      "author": "Nelson Mandela",
+      "price": "550"
+    },
+    {
+      "title": "Promised Land",
+      "price": "450",
+      "author": "Barack Obama",
+      "id": 4
+    },
+    {
+      "title": "The World is Flat",
+      "price": "450",
+      "author": "Thomas Friedman",
+      "id": 5
+    },
+    {
+      "title": "Gift of Fear",
+      "price": "874",
+      "author": "Gavin de Becker",
+      "id": 6
+    },
+    {
+      "title": "New Book",
+      "author": "New Author",
+      "price": "393",
+      "id": 7
+    },
+    {
+      "title": "You can win ",
+      "author": "Shiv khera",
+      "price": "250",
+      "id": 8
+    },
+    {
+      "title": "The outlier",
+      "author": "Malcolm Galdwell",
+      "price": "700",
+      "id": 9
+    }
+  ],
+  "authors": [
+    {
+      "id": 1,
+      "name": "Malcolm Galdwell",
+      "email": "malcolm@gmail.com"
+    },
+    {
+      "id": 2,
+      "name": "Stephen King",
+      "email": "sking@gmail.com"
+    },
+    {
+      "id": 3,
+      "name": "Daniel Steel",
+      "email": "danielsteel@gmail.com"
+    },
+    {
+      "id": 4,
+      "name": "Yuval Noah Harari",
+      "email": "noahharari@gmail.com"
+    }
+  ]
+}

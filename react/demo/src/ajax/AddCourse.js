@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import $ from 'jquery'
 
 export default function AddCourses() {
-    const [course, setCourse] = useState({})
+    const [course, setCourse] = useState({ title : '', trainer : 'Srikanth', price : 5000})
     
     function changeValue(e) {
         setCourse({ ...course, [e.target.name]: e.target.value })
@@ -36,10 +36,12 @@ export default function AddCourses() {
                                    onChange={changeValue} required />
                 <p></p>
                 Trainer <br />
-                <input type="text" name="trainer" value={course.trainer} onChange={changeValue} required />
+                <input type="text" name="trainer" value={course.trainer}
+                 onChange={changeValue} required />
                 <p></p>
                 Price <br />
-                <input type="text" name="price" value={course.price} onChange={changeValue} required />
+                <input type="text" name="price" value={course.price} 
+                onChange={changeValue} required />
                 <p></p>
                 <button>Submit</button>
             </form>
