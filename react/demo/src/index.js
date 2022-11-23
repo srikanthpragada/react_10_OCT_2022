@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import AddCourses from './ajax/AddCourse';
-import ListCourses from './ajax/ListCourses';
+import Books from './books/Books';
 import './index.css';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -18,8 +18,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <React.StrictMode> 
-     <AddCourses />
-     <ListCourses />
+      <Books />
   </React.StrictMode>
 );
 

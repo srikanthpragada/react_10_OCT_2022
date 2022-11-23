@@ -25,15 +25,9 @@
       "id": 6
     },
     {
-      "title": "New Book",
-      "author": "New Author",
-      "price": "393",
-      "id": 7
-    },
-    {
       "title": "You can win ",
       "author": "Shiv khera",
-      "price": "250",
+      "price": "300",
       "id": 8
     },
     {
@@ -41,6 +35,12 @@
       "author": "Malcolm Galdwell",
       "price": "700",
       "id": 9
+    },
+    {
+      "title": "No Rules Rules",
+      "author": "Hasting",
+      "price": "600",
+      "id": 10
     }
   ],
   "authors": [

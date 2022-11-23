@@ -49,11 +49,13 @@ export default function AddBook() {
 
       <form onSubmit={addBook}>
         Title <br />
-        <input type="text" value={book.title} required onChange={changeValue} name="title" />
+        <input type="text" value={book.title} required 
+               onChange={changeValue} name="title" />
         <p></p>
 
         Author <br />
-        <input type="text" value={book.author} required onChange={changeValue} name="author" />
+        <input type="text" value={book.author} required 
+               onChange={changeValue} name="author" />
         <p></p>
 
         Price <br />
